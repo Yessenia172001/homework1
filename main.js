@@ -1,13 +1,9 @@
-
-const question = prompt('Сколько фильмов вы уже посмотрели?');
-const numberOfFilms = question;
-console.log(numberOfFilms); 
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
 const personalMovieDB = {
     count: numberOfFilms,
     movies: {
-        'lastFilm': 'lastFilmRate',
-        'lastFilmSecond': 'lastFilmRateSecond', 
+
     },
     actors: {
 
@@ -16,14 +12,15 @@ const personalMovieDB = {
     privat: false,
 }
 
-const lastFilm = prompt('Один из последних просмотренных фильмов?');
-const lastFilmRate = prompt('На сколько оцените его?');
+const a = prompt('Один из последних просмотренных фильмов?'),
+    b = +prompt('На сколько оцениваете его?'),
+    c = prompt('Один из последних просмотренных фильмов?'),
+    d = +prompt('На сколько оцениваете его?');
 
-console.log(lastFilm);
-console.log(lastFilmRate);
+personalMovieDB.movies[a] = b,
+personalMovieDB.movies[c] = d;
 
-const lastFilmSecond = prompt('Один из последних просмотренных фильмов?');
-const lastFilmRateSecond = prompt('На сколько оцениваете его?');
 
-console.log(lastFilmSecond);
-console.log(lastFilmRateSecond);
+console.log(personalMovieDB)
+
+
